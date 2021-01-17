@@ -25,7 +25,7 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
       .filter((m) => m.fields.category.sys.id === id)
       .sort((a, b) => a.fields.price - b.fields.price)
       .map((m) => (
-        <StyledMenuItem>
+        <StyledMenuItem key={m.sys.id}>
           <span>{m.fields.name}</span>
           <span>
             {m.fields.price}
@@ -52,6 +52,14 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
       <ul>{renderItems("53Rkquu36bGAmwXLD0u8R4")}</ul>
       <StyledSectionTitle>sānmíngzhì (sandwiches) </StyledSectionTitle>
       <ul>{renderItems("0QC1ImB9ci4w7oUG4XC35")}</ul>
+      <StyledSectionTitle>burgers and sandos</StyledSectionTitle>
+      <ul>{renderItems("76BKlNG3pAKhr16pGyn34j")}</ul>
+      <StyledSectionTitle>
+        xiǎochí (small bites) + sālā (salad)
+      </StyledSectionTitle>
+      <ul>{renderItems("76LH3xj7lRujiSttLngJvY")}</ul>
+      <StyledSectionTitle>fried chicken</StyledSectionTitle>
+      <ul>{renderItems("3sFtSsq8TFogydZmEqCxfP")}</ul>
       <style jsx>{`
         .container {
           display: flex;
