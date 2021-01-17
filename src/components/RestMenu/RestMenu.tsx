@@ -27,7 +27,10 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
       .map((m) => (
         <StyledMenuItem>
           <span>{m.fields.name}</span>
-          <span>{m.fields.price}</span>
+          <span>
+            {m.fields.price}
+            {m.fields.priceHigh ? " / " + m.fields.priceHigh : ""}
+          </span>
         </StyledMenuItem>
       ));
   };
