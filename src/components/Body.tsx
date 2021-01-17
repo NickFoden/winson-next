@@ -17,7 +17,28 @@ const Body = ({ children }) => (
       <meta property="og:url" content="https://winsonbrooklyn.com/" />
     </Head>
     <HeaderNav />
-    {children}
+    <main className="container">{children}</main>
+    <footer>
+      <p>Win Son Brooklyn</p>
+      <p>© {new Date().getFullYear()}</p>
+    </footer>
+    <style jsx>
+      {`
+        footer {
+          display: flex;
+          flex-direction: column;
+          font-family: "Courier New", Courier, monospace;
+          align-items: center;
+          width: 100vw;
+        }
+        .container {
+          margin: 0 auto;
+          max-width: 700px;
+          min-height: 90vh;
+          padding: 1rem;
+        }
+      `}
+    </style>
   </>
 );
 

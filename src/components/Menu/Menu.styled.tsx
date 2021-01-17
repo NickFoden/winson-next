@@ -5,13 +5,14 @@ interface MenuProps {
 }
 
 export const StyledMenu = styled.nav<MenuProps>`
-  @media screen and (min-width: 500px) {
-    display: none;
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: flex;
   }
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => theme.primaryLight};
+  /* background: ${({ theme }) => theme.primaryLight}; */
+  background: white;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;

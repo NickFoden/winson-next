@@ -1,25 +1,19 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
 import { client } from "../src/utils/contentful";
 import Body from "../src/components/Body";
 
 const Home = ({ pageContent }) => {
-  return (
-    <Body>
-      <main></main>
-
-      <footer>Win Son Brooklyn</footer>
-      <style jsx>{`
-        footer {
-          display: flex;
-          font-family: "Courier New", Courier, monospace;
-          justify-content: center;
-          width: 100vw;
-        }
-        main {
-          min-height: 90vh;
-        }
-      `}</style>
-    </Body>
-  );
+  const { fields = {} } = pageContent;
+  const { body1 } = fields;
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <p style={{ marginBottom: "1rem" }}>{children}</p>
+      ),
+    },
+  };
+  return <Body>{documentToReactComponents(body1, options)}</Body>;
 };
 
 export default Home;
