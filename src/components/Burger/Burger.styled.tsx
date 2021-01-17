@@ -5,7 +5,7 @@ interface ButtonProps {
 
 export const StyledBurger = styled.button<ButtonProps>`
   display: none;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 499px) {
     display: flex;
   }
   flex-direction: column;
