@@ -1,6 +1,7 @@
+import { client } from "../src/utils/contentful";
 import Body from "../src/components/Body";
 
-const Home = () => {
+const Home = ({ pageContent }) => {
   return (
     <Body>
       <main>
@@ -24,3 +25,12 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps(context) {
+  const pageContent = await client.getEntry("2Wl0LiwXi1zKj8isybwT6D");
+  return {
+    props: {
+      pageContent,
+    },
+  };
+}
