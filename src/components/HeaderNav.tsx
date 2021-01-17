@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { useOnClickOutside } from "../utils/clickOutside";
 import Burger from "../components/Burger";
@@ -6,9 +6,14 @@ import Menu from "../components/Menu";
 
 const HeaderNav = () => {
   const [open, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const node = useRef();
 
   useOnClickOutside(node, () => setOpen(false));
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   return (
     <>
       <nav ref={node}>
@@ -25,7 +30,7 @@ const HeaderNav = () => {
           </Link>
         </div>
       </nav>
-      <Menu open={open} setOpen={setOpen} />
+      {loaded && <Menu open={open} setOpen={setOpen} />}
       <style jsx>{`
         nav {
           display: flex;
@@ -36,6 +41,7 @@ const HeaderNav = () => {
         .home {
           color: black;
           font-family: "Courier New", Courier, monospace;
+          font-size: 1.5rem;
           text-decoration: none;
         }
         .home:hover {
