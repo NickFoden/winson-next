@@ -1,4 +1,5 @@
 import Head from "next/head";
+import HeaderNav from "./HeaderNav";
 
 const Body = ({ children }) => (
   <>
@@ -15,6 +16,7 @@ const Body = ({ children }) => (
       <meta property="og:image" content="/winson-bear.jpg" />
       <meta property="og:url" content="https://winsonbrooklyn.com/" />
     </Head>
+    <HeaderNav />
     {children}
   </>
 );
