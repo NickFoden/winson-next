@@ -4,6 +4,13 @@ interface MenuProps {
   open: boolean;
 }
 
+const theme = {
+  primaryDark: "#0D0C1D",
+  primaryLight: "#EFFFFA",
+  primaryHover: "#343078",
+  mobile: "576px",
+};
+
 export const StyledMenu = styled.nav<MenuProps>`
   display: none;
   @media screen and (max-width: 500px) {
