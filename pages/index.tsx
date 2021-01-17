@@ -49,6 +49,7 @@ const Home = ({ bakeryContent, pageContent, restaurantContent }) => {
         .column {
           display: flex;
           flex-direction: column;
+          align-items: center;
         }
         .logo {
           height: 75px;
