@@ -59,6 +59,10 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
           margin: 0 auto;
           max-width: 500px;
         }
+        .delivery_link {
+          color: black;
+          font-family: Courier;
+        }
         .logo {
           border: 1px solid white;
           border-radius: 5px;
@@ -68,12 +72,7 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
           transition: opacity ease-in-out 350ms, border ease-in-out 350ms;
         }
         .logo:hover {
-          // border: 1px solid orange;
           opacity: 0.7;
-        }
-        .delivery_link {
-          color: black;
-          font-family: Courier;
         }
         .row_links {
           display: flex;

@@ -1,13 +1,16 @@
 import React from "react";
-import { client } from "../src/utils/contentful";
+import { bakeryClient, client } from "../src/utils/contentful";
 import Body from "../src/components/Body";
+import RestMenu from "../src/components/RestMenu";
 import { RestaurantContent } from "../types/restaurant";
+import { MenuContent } from "../types/menuContent";
 
 interface RestaurantProps {
+  bakeryMenuContent: MenuContent;
   pageContent: RestaurantContent;
 }
 
-const Bakery = ({ pageContent }: RestaurantProps) => {
+const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
   const { fields, sys } = pageContent;
   const {
     deliveryUrl,
@@ -47,6 +50,7 @@ const Bakery = ({ pageContent }: RestaurantProps) => {
           </a>
         </div>
       </section>
+      <RestMenu menu={bakeryMenuContent} />
       <style jsx>{`
         p {
           font-size: 0.8rem;
@@ -59,6 +63,10 @@ const Bakery = ({ pageContent }: RestaurantProps) => {
           margin: 0 auto;
           max-width: 500px;
         }
+        .delivery_link {
+          color: black;
+          font-family: Courier;
+        }
         .logo {
           border: 1px solid white;
           border-radius: 5px;
@@ -68,12 +76,7 @@ const Bakery = ({ pageContent }: RestaurantProps) => {
           transition: opacity ease-in-out 350ms, border ease-in-out 350ms;
         }
         .logo:hover {
-          // border: 1px solid orange;
           opacity: 0.7;
-        }
-        .delivery_link {
-          color: black;
-          font-family: Courier;
         }
         .row_links {
           display: flex;
@@ -93,8 +96,13 @@ export default Bakery;
 
 export async function getStaticProps(context) {
   const pageContent = await client.getEntry("6FrvEE0piUY6cWhSwzTBrP");
+  const bakeryMenuContent = await bakeryClient.getEntries({
+    content_type: "menuItem",
+  });
+
   return {
     props: {
+      bakeryMenuContent,
       pageContent,
     },
   };
