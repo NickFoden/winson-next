@@ -4,9 +4,7 @@ import Body from "../src/components/Body";
 const Home = ({ pageContent }) => {
   return (
     <Body>
-      <main>
-        <h1>Win Son Brooklyn</h1>
-      </main>
+      <main></main>
 
       <footer>Win Son Brooklyn</footer>
       <style jsx>{`
