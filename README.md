@@ -1,4 +1,4 @@
-## WinSon Next
+## Win Son Bakery and Restaurant
 
 This repo is the home of https://winsonbrooklyn.com/
 
