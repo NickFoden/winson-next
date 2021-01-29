@@ -1,7 +1,7 @@
 import React from "react";
 import { bakeryClient, client } from "../src/utils/contentful";
 import Body from "../src/components/Body";
-import RestMenu from "../src/components/RestMenu";
+import BakeryMenu from "../src/components/BakeryMenu";
 import { RestaurantContent } from "../types/restaurant";
 import { MenuContent } from "../types/menuContent";
 
@@ -50,7 +50,7 @@ const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
           </a>
         </div>
       </section>
-      <RestMenu menu={bakeryMenuContent} />
+      <BakeryMenu menu={bakeryMenuContent} />
       <style jsx>{`
         p {
           font-size: 0.8rem;
