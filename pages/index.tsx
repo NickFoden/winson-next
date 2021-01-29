@@ -52,6 +52,7 @@ const Home = ({ bakeryContent, pageContent, restaurantContent }) => {
           align-items: center;
         }
         .logo {
+          cursor: pointer;
           height: 75px;
           object-fit: cover;
           width: 75px;
