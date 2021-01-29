@@ -61,11 +61,21 @@ const Home = ({ bakeryContent, pageContent, restaurantContent }) => {
           font-size: 1.25rem;
         }
         .row {
-          display: flex;
-          justify-content: space-between;
-          margin: 2rem auto;
-          width: 300px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin: 4rem auto;
+          min-width: 300px;
           max-width: 90vw;
+        }
+        @media only screen and (min-width: 900px) {
+          .logo {
+            height: 200px;
+            object-fit: cover;
+            width: 200px;
+          }
+          .row {
+            width: 700px;
+          }
         }
       `}</style>
     </Body>

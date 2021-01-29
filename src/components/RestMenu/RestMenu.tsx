@@ -15,7 +15,7 @@ export const StyledMenuItem = styled.li`
 
 export const StyledSectionTitle = styled.h1`
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 1rem 0 0.5rem;
 `;
 
@@ -26,11 +26,28 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
       .sort((a, b) => a.fields.price - b.fields.price)
       .map((m) => (
         <StyledMenuItem key={m.sys.id}>
-          <span>{m.fields.name}</span>
-          <span>
-            {m.fields.price}
-            {m.fields.priceHigh ? " / " + m.fields.priceHigh : ""}
+          <span className="item_title">
+            {m.fields.name}{" "}
+            <span className="item_desc">{m.fields.optionalDescription}</span>
           </span>
+          <p className="price_span">
+            {m.fields.price}
+            {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
+          </p>
+          <style jsx>{`
+            .item_title {
+              font-size: 1rem;
+            }
+            .item_desc {
+              font-size: 0.8rem;
+              font-weight: 400;
+            }
+            .price_span {
+              min-width: 50px;
+              font-weight: 500;
+              text-align: right;
+            }
+          `}</style>
         </StyledMenuItem>
       ));
 
@@ -63,6 +80,14 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
         <ul>{renderItems("76LH3xj7lRujiSttLngJvY")}</ul>
         <StyledSectionTitle>fried chicken</StyledSectionTitle>
         <ul>{renderItems("3sFtSsq8TFogydZmEqCxfP")}</ul>
+        <p className="diet">
+          v = vegetarian vg = vegan gf = gluten-free * = can be made as
+        </p>
+        <p className="warning">
+          please inform us if you have a food allergy. consuming raw or
+          undercooked meats, poultry, seafood, shellfish, or eggs may increase
+          your risk of foodborne illness
+        </p>
       </section>
       <style jsx>{`
         section {
@@ -76,6 +101,15 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
           margin: 2rem auto;
           width: 300px;
         }
+        .diet {
+          font-size: 0.8rem;
+          margin: 1rem 0 0 0;
+        }
+        .warning {
+          font-size: 0.8rem;
+          margin: 1rem 0 0 0;
+        }
+
         @media only screen and (min-width: 900px) {
           section {
             width: 400px;

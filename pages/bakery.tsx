@@ -66,6 +66,7 @@ const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
         .delivery_link {
           color: black;
           font-family: Courier;
+          font-size: 1.5rem;
         }
         .logo {
           border: 1px solid white;
