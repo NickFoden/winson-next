@@ -52,7 +52,7 @@ const Body = ({ children }) => {
           }
           .container {
             margin: 0 auto;
-            max-width: 700px;
+            max-width: 750px;
             min-height: 90vh;
             padding: 1rem;
           }

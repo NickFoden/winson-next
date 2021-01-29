@@ -20,7 +20,6 @@ export const StyledSectionTitle = styled.h1`
 `;
 
 const RestMenu = ({ menu, ...props }: RestMenuProps) => {
-  console.dir(menu);
   const renderItems = (id: string) =>
     menu.items
       .filter((m) => m.fields.category.sys.id === id)
