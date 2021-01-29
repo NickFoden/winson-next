@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MenuContent } from "../../../types/menuContent";
 
-interface RestMenuProps {
+interface BakeryMenuProps {
   menu: MenuContent;
 }
 
@@ -19,8 +19,7 @@ export const StyledSectionTitle = styled.h1`
   margin: 1rem 0 0.5rem;
 `;
 
-const RestMenu = ({ menu, ...props }: RestMenuProps) => {
-  console.dir(menu);
+const BakeryMenu = ({ menu, ...props }: BakeryMenuProps) => {
   const renderItems = (id: string) =>
     menu.items
       .filter((m) => m.fields.category.sys.id === id)
@@ -55,21 +54,32 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
   return (
     <div className="container">
       <section>
-        <StyledSectionTitle>food</StyledSectionTitle>
-        <ul>{renderItems("61P8WgXiX9V1lmt6FZRBFP")}</ul>
+        <StyledSectionTitle>café</StyledSectionTitle>
+        <ul>{renderItems("31ew4musUFvIQwGuUIzSqT")}</ul>
+        <StyledSectionTitle>tea</StyledSectionTitle>
+        <ul>{renderItems("6Prj3ThvNKHOog0QgKgJT1")}</ul>
+        <StyledSectionTitle>soy milk</StyledSectionTitle>
+        <ul>{renderItems("5Jq1WH2mW2hR8Mi8sTipoN")}</ul>
+        <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
+        <ul>{renderItems("fPpaUAEwuMMVAKVYhB87T")}</ul>
         <StyledSectionTitle>beer</StyledSectionTitle>
-        <StyledSectionTitle>can & bottle</StyledSectionTitle>
-        <ul>{renderItems("21V6JJFoWE25ESGNiqhQ4Q")}</ul>
-        <StyledSectionTitle>drafts</StyledSectionTitle>
-        <ul>{renderItems("6Y4PargCt5Ysv5bRk0m0J4")}</ul>
-        <StyledSectionTitle>grocery</StyledSectionTitle>
-        <ul>{renderItems("6I9iScWxpaKc1dStXblHjJ")}</ul>
+        <ul>{renderItems("50Bp6zRhXoOq7VSiTdPK6D")}</ul>
+        <StyledSectionTitle>wine</StyledSectionTitle>
+        <ul>{renderItems("15tfKdhSoLmx6rlkMVi2TH")}</ul>
       </section>
       <section>
-        <StyledSectionTitle>cocktails</StyledSectionTitle>
-        <ul>{renderItems("6WfZm0iNDjZ5U20XtiPjKz")}</ul>
-        <StyledSectionTitle>wine </StyledSectionTitle>
-        <ul>{renderItems("1WBvbRYMpbZWPogkXdRVKH")}</ul>
+        <StyledSectionTitle>gāodiǎn (pastries) </StyledSectionTitle>
+        <ul>{renderItems("53Rkquu36bGAmwXLD0u8R4")}</ul>
+        <StyledSectionTitle>sānmíngzhì (sandwiches) </StyledSectionTitle>
+        <ul>{renderItems("0QC1ImB9ci4w7oUG4XC35")}</ul>
+        <StyledSectionTitle>burgers and sandos</StyledSectionTitle>
+        <ul>{renderItems("76BKlNG3pAKhr16pGyn34j")}</ul>
+        <StyledSectionTitle>
+          xiǎochí (small bites) + sālā (salad)
+        </StyledSectionTitle>
+        <ul>{renderItems("76LH3xj7lRujiSttLngJvY")}</ul>
+        <StyledSectionTitle>fried chicken</StyledSectionTitle>
+        <ul>{renderItems("3sFtSsq8TFogydZmEqCxfP")}</ul>
         <p className="diet">
           v = vegetarian vg = vegan gf = gluten-free * = can be made as
         </p>
@@ -115,4 +125,4 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
   );
 };
 
-export default RestMenu;
+export default BakeryMenu;

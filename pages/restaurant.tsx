@@ -1,13 +1,16 @@
 import React from "react";
 import { client } from "../src/utils/contentful";
 import Body from "../src/components/Body";
+import RestMenu from "../src/components/RestMenu";
 import { RestaurantContent } from "../types/restaurant";
 
 interface RestaurantProps {
   pageContent: RestaurantContent;
+  restaurantMenu: any;
 }
 
-const Restaurant = ({ pageContent }: RestaurantProps) => {
+const Restaurant = ({ pageContent, restaurantMenu }: RestaurantProps) => {
+  console.dir(restaurantMenu);
   const { fields, sys } = pageContent;
   const {
     deliveryUrl,
@@ -47,6 +50,7 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
           </a>
         </div>
       </section>
+      <RestMenu menu={restaurantMenu} />
       <style jsx>{`
         p {
           font-size: 0.8rem;
@@ -62,6 +66,7 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
         .delivery_link {
           color: black;
           font-family: Courier;
+          font-size: 1.5rem;
         }
         .logo {
           border: 1px solid white;
@@ -92,9 +97,13 @@ export default Restaurant;
 
 export async function getStaticProps(context) {
   const pageContent = await client.getEntry("3xE7ccbNmslBqWxYlZvHj3");
+  const restaurantMenu = await client.getEntries({
+    content_type: "item",
+  });
   return {
     props: {
       pageContent,
+      restaurantMenu,
     },
   };
 }
