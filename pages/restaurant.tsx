@@ -10,7 +10,6 @@ interface RestaurantProps {
 }
 
 const Restaurant = ({ pageContent, restaurantMenu }: RestaurantProps) => {
-  console.dir(restaurantMenu);
   const { fields, sys } = pageContent;
   const {
     deliveryUrl,
