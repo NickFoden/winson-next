@@ -1,4 +1,4 @@
-interface MenuItem {
+export interface MenuItem {
   fields: {
     canBeGlutenFree: boolean;
     canBeVegan: boolean;
