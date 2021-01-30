@@ -68,9 +68,9 @@ const BakeryMenu = ({ menu, ...props }: BakeryMenuProps) => {
         <ul>{renderItems("15tfKdhSoLmx6rlkMVi2TH")}</ul>
       </section>
       <section>
-        <StyledSectionTitle>gāodiǎn (pastries) </StyledSectionTitle>
+        <StyledSectionTitle>gāodiǎn (pastries)</StyledSectionTitle>
         <ul>{renderItems("53Rkquu36bGAmwXLD0u8R4")}</ul>
-        <StyledSectionTitle>sānmíngzhì (sandwiches) </StyledSectionTitle>
+        <StyledSectionTitle>sānmíngzhì (sandwiches)</StyledSectionTitle>
         <ul>{renderItems("0QC1ImB9ci4w7oUG4XC35")}</ul>
         <StyledSectionTitle>burgers and sandos</StyledSectionTitle>
         <ul>{renderItems("76BKlNG3pAKhr16pGyn34j")}</ul>

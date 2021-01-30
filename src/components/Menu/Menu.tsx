@@ -10,21 +10,11 @@ const Menu = ({ open, ...props }) => {
     <>
       <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
         <Link href="/restaurant">
-          <a tabIndex={tabIndex}>
-            {/* <span aria-hidden="true">💁🏻‍♂️</span> */}
-            Restaurant
-          </a>
+          <a tabIndex={tabIndex}>Restaurant</a>
         </Link>
         <Link href="/bakery">
-          <a tabIndex={tabIndex}>
-            {/* <span aria-hidden="true">💸</span> */}
-            Bakery
-          </a>
+          <a tabIndex={tabIndex}>Bakery</a>
         </Link>
-        {/* <a href="/" tabIndex={tabIndex}>
-        <span aria-hidden="true">📩</span>
-        Contact
-      </a> */}
       </StyledMenu>
       <style jsx>{`
         a {

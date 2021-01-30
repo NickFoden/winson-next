@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest",
+    "validate": "tsc --noEmit"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.2",
@@ -35,5 +37,10 @@
   },
   "volta": {
     "node": "12.18.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate && npm test"
+    }
   }
 }
