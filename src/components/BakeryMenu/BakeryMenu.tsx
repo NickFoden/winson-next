@@ -36,11 +36,15 @@ const BakeryMenu = ({ menu, ...props }: BakeryMenuProps) => {
           </p>
           <style jsx>{`
             .item_title {
+              display: flex;
+              flex-direction: column;
               font-size: 1rem;
             }
             .item_desc {
               font-size: 0.8rem;
               font-weight: 400;
+              line-height: 1.1;
+              margin-top: 2px;
             }
             .price_span {
               min-width: 50px;

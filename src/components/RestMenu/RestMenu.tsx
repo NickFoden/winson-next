@@ -9,7 +9,7 @@ interface RestMenuProps {
 export const StyledMenuItem = styled.li`
   display: flex;
   justify-content: space-between;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   width: 300px;
 `;
 
@@ -36,11 +36,15 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
           </p>
           <style jsx>{`
             .item_title {
+              display: flex;
+              flex-direction: column;
               font-size: 1rem;
             }
             .item_desc {
               font-size: 0.8rem;
               font-weight: 400;
+              line-height: 1.1;
+              margin-top: 2px;
             }
             .price_span {
               min-width: 50px;
