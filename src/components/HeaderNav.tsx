@@ -20,7 +20,10 @@ const HeaderNav = () => {
     <>
       <nav ref={node}>
         <Link href="/">
-          <a className="home">Win Son</a>
+          <a>
+            <img src="/images/WinSonSignTypeLogo.png" className="logo" />
+          </a>
+          {/* <a className="home">Win Son</a> */}
         </Link>
         <Burger open={open} setOpen={setOpen} />
         <div className="links_container">
@@ -32,7 +35,10 @@ const HeaderNav = () => {
                   : "venue"
               }
             >
-              Restaurant
+              <img
+                src="/images/RestaurantMatrousso.jpeg"
+                className="logo_links"
+              />
             </a>
           </Link>
           <Link href="/bakery">
@@ -43,7 +49,10 @@ const HeaderNav = () => {
                   : "venue"
               }
             >
-              Bakery
+              <img
+                src="/images/BakerySignTypeLogo.png"
+                className="logo_links"
+              />
             </a>
           </Link>
         </div>
@@ -69,23 +78,36 @@ const HeaderNav = () => {
         .links_container {
           display: none;
         }
+        .logo {
+          height: 3rem;
+          width: auto;
+        }
+        .logo_links {
+          height: 2rem;
+          width: auto;
+        }
         .venue {
-          color: black;
-          font-family: "Courier New", Courier, monospace;
-          font-size: 1.5rem;
-          line-height: 1.2;
           margin-right: 2rem;
-          text-decoration: none;
         }
         .venue:hover {
           opacity: 0.7;
         }
         .venue_active {
-          text-decoration: underline;
+          border-bottom: 3px solid black;
         }
-        @media screen and (min-width: 500px) {
+        @media screen and (max-width: 800px) {
+          .logo_links {
+            height: 2rem;
+          }
+        }
+        @media screen and (min-width: 720px) {
           .links_container {
             display: block;
+          }
+        }
+        @media screen and (min-width: 1280px) {
+          .logo_links {
+            height: 3rem;
           }
         }
       `}</style>

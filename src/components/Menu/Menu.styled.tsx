@@ -13,7 +13,7 @@ const theme = {
 
 export const StyledMenu = styled.nav<MenuProps>`
   display: none;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 719px) {
     display: flex;
   }
   flex-direction: column;
@@ -28,7 +28,7 @@ export const StyledMenu = styled.nav<MenuProps>`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-
+  z-index: 5;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }

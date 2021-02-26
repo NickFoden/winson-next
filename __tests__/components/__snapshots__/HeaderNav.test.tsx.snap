@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNav HeaderNav Renders 1`] = `
+<DocumentFragment>
+  <nav
+    class="jsx-2881130488"
+  >
+    <a
+      class="jsx-2881130488"
+      href="/"
+    >
+      <img
+        class="jsx-2881130488 logo"
+        src="/images/WinSonSignTypeLogo.png"
+      />
+    </a>
+    <button
+      aria-expanded="false"
+      aria-label="Toggle menu"
+      class="Burgerstyled__StyledBurger-n2mypy-0 dpBCVs"
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+    <div
+      class="jsx-2881130488 links_container"
+    >
+      <a
+        class="jsx-2881130488 venue"
+        href="/restaurant"
+      >
+        <img
+          class="jsx-2881130488 logo_links"
+          src="/images/RestaurantMatrousso.jpeg"
+        />
+      </a>
+      <a
+        class="jsx-2881130488 venue"
+        href="/bakery"
+      >
+        <img
+          class="jsx-2881130488 logo_links"
+          src="/images/BakerySignTypeLogo.png"
+        />
+      </a>
+    </div>
+  </nav>
+  <nav
+    aria-hidden="true"
+    class="Menustyled__StyledMenu-sc-1ipxm0t-0 ePfPiP"
+  >
+    <a
+      class="jsx-3838528175"
+      href="/restaurant"
+      tabindex="-1"
+    >
+      Restaurant
+    </a>
+    <a
+      class="jsx-3838528175"
+      href="/bakery"
+      tabindex="-1"
+    >
+      Bakery
+    </a>
+  </nav>
+</DocumentFragment>
+`;
