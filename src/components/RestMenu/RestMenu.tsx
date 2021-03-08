@@ -71,10 +71,10 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
       <section>
         <StyledSectionTitle>cocktails</StyledSectionTitle>
         <ul>{renderItems("6WfZm0iNDjZ5U20XtiPjKz")}</ul>
-        <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
-        <ul>{renderItems("5NwcH44WWl4mwyRgmVogBh")}</ul>
         <StyledSectionTitle>wine </StyledSectionTitle>
         <ul>{renderItems("1WBvbRYMpbZWPogkXdRVKH")}</ul>
+        <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
+        <ul>{renderItems("5NwcH44WWl4mwyRgmVogBh")}</ul>
         <p className="diet">
           v = vegetarian vg = vegan gf = gluten-free * = can be made as
         </p>

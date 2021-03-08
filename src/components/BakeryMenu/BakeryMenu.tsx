@@ -64,12 +64,12 @@ const BakeryMenu = ({ menu, ...props }: BakeryMenuProps) => {
         <ul>{renderItems("6Prj3ThvNKHOog0QgKgJT1")}</ul>
         <StyledSectionTitle>soy milk</StyledSectionTitle>
         <ul>{renderItems("5Jq1WH2mW2hR8Mi8sTipoN")}</ul>
-        <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
-        <ul>{renderItems("fPpaUAEwuMMVAKVYhB87T")}</ul>
         <StyledSectionTitle>beer</StyledSectionTitle>
         <ul>{renderItems("50Bp6zRhXoOq7VSiTdPK6D")}</ul>
         <StyledSectionTitle>wine</StyledSectionTitle>
         <ul>{renderItems("15tfKdhSoLmx6rlkMVi2TH")}</ul>
+        <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
+        <ul>{renderItems("fPpaUAEwuMMVAKVYhB87T")}</ul>
       </section>
       <section>
         <StyledSectionTitle>gāodiǎn (pastries)</StyledSectionTitle>

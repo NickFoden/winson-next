@@ -83,7 +83,7 @@ const HeaderNav = () => {
           width: auto;
         }
         .logo_links {
-          height: 2rem;
+          height: 1.5rem;
           width: auto;
         }
         .venue {
@@ -97,7 +97,7 @@ const HeaderNav = () => {
         }
         @media screen and (max-width: 800px) {
           .logo_links {
-            height: 2rem;
+            height: 1.5rem;
           }
         }
         @media screen and (min-width: 720px) {
@@ -107,7 +107,7 @@ const HeaderNav = () => {
         }
         @media screen and (min-width: 1280px) {
           .logo_links {
-            height: 3rem;
+            height: 2rem;
           }
         }
       `}</style>
