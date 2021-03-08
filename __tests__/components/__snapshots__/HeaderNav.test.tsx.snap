@@ -3,14 +3,14 @@
 exports[`HeaderNav HeaderNav Renders 1`] = `
 <DocumentFragment>
   <nav
-    class="jsx-2881130488"
+    class="jsx-110598338"
   >
     <a
-      class="jsx-2881130488"
+      class="jsx-110598338"
       href="/"
     >
       <img
-        class="jsx-2881130488 logo"
+        class="jsx-110598338 logo"
         src="/images/WinSonSignTypeLogo.png"
       />
     </a>
@@ -24,23 +24,23 @@ exports[`HeaderNav HeaderNav Renders 1`] = `
       <span />
     </button>
     <div
-      class="jsx-2881130488 links_container"
+      class="jsx-110598338 links_container"
     >
       <a
-        class="jsx-2881130488 venue"
+        class="jsx-110598338 venue"
         href="/restaurant"
       >
         <img
-          class="jsx-2881130488 logo_links"
+          class="jsx-110598338 logo_links"
           src="/images/RestaurantMatrousso.jpeg"
         />
       </a>
       <a
-        class="jsx-2881130488 venue"
+        class="jsx-110598338 venue"
         href="/bakery"
       >
         <img
-          class="jsx-2881130488 logo_links"
+          class="jsx-110598338 logo_links"
           src="/images/BakerySignTypeLogo.png"
         />
       </a>
