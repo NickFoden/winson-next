@@ -13,7 +13,7 @@ const Body = ({ children }) => {
         <meta property="og:title" content="Win Son" key="title" name="title" />
         <meta
           name="description"
-          content="Winson - taiwanese american restaurant and bakery in Brooklyn New York City"
+          content="taiwanese-american restaurant and bakery"
         />
         <meta property="og:image" content="/winson-bear.jpg" />
         <meta property="og:url" content="https://winsonbrooklyn.com/" />
