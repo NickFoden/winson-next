@@ -5,17 +5,13 @@ import { useRouter } from "next/router";
 const SubHeaderNav = () => {
   const router = useRouter();
 
-  const menuLink = () => {
-    if (router?.pathname?.includes("restaurant")) {
-      return "/restaurant/menu";
-    } else {
-      return "/bakery/menu";
-    }
-  };
+  const menuLink = router?.pathname?.includes("restaurant")
+    ? "/restaurant/menu"
+    : "/bakery/menu";
   return (
     <>
       <nav>
-        <Link href={menuLink()}>
+        <Link href={menuLink}>
           <a
             className={
               router && router.pathname.includes("menu")

@@ -32,7 +32,7 @@ const HeaderNav = () => {
             <Link href="/restaurant">
               <a
                 className={
-                  router && router.pathname === "/restaurant"
+                  router && router.pathname.includes("restaurant")
                     ? "venue_active venue"
                     : "venue"
                 }
@@ -46,7 +46,7 @@ const HeaderNav = () => {
             <Link href="/bakery">
               <a
                 className={
-                  router && router.pathname === "/bakery"
+                  router && router.pathname.includes("bakery")
                     ? "venue_active venue"
                     : "venue"
                 }
