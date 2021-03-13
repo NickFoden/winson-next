@@ -60,21 +60,7 @@ exports[`HeaderNav HeaderNav Renders 1`] = `
       </div>
       <div
         class="jsx-110598338 links_container"
-      >
-        <nav
-          class="jsx-2257590885"
-        >
-          <a
-            class="jsx-2257590885 venue"
-            href="/bakery/menu"
-          >
-            <img
-              class="jsx-2257590885"
-              src="/svg/menu.svg"
-            />
-          </a>
-        </nav>
-      </div>
+      />
     </div>
   </nav>
   <nav
