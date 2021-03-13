@@ -11,39 +11,70 @@ exports[`HeaderNav HeaderNav Renders 1`] = `
     >
       <img
         class="jsx-110598338 logo"
-        src="/images/WinSonSignTypeLogo.png"
+        src="/svg/morewinsonbuttons_winson.svg"
       />
     </a>
-    <button
-      aria-expanded="false"
-      aria-label="Toggle menu"
-      class="Burgerstyled__StyledBurger-n2mypy-0 dpBCVs"
+    <div
+      class="jsx-264131979 container"
     >
-      <span />
-      <span />
-      <span />
-    </button>
+      <button
+        aria-expanded="false"
+        aria-label="Toggle menu"
+        class="Burgerstyled__StyledBurger-n2mypy-0 dpBCVs"
+      >
+        <span
+          class="jsx-264131979"
+        />
+        <span
+          class="jsx-264131979"
+        />
+        <span
+          class="jsx-264131979"
+        />
+      </button>
+    </div>
     <div
       class="jsx-110598338 links_container"
     >
-      <a
-        class="jsx-110598338 venue"
-        href="/restaurant"
+      <div
+        class="jsx-110598338 links_container"
       >
-        <img
-          class="jsx-110598338 logo_links"
-          src="/images/RestaurantMatrousso.jpeg"
-        />
-      </a>
-      <a
-        class="jsx-110598338 venue"
-        href="/bakery"
+        <a
+          class="jsx-110598338 venue"
+          href="/restaurant"
+        >
+          <img
+            class="jsx-110598338 logo_links"
+            src="/svg/morewinsonbuttons_restaurant.svg"
+          />
+        </a>
+        <a
+          class="jsx-110598338 venue"
+          href="/bakery"
+        >
+          <img
+            class="jsx-110598338 logo_links"
+            src="/svg/morewinsonbuttons_bakery.svg"
+          />
+        </a>
+      </div>
+      <div
+        class="jsx-110598338 links_container"
       >
-        <img
-          class="jsx-110598338 logo_links"
-          src="/images/BakerySignTypeLogo.png"
-        />
-      </a>
+        <nav
+          class="jsx-2257590885"
+        >
+          <a
+            class="jsx-2257590885 venue"
+            href="/bakery/menu"
+          >
+            <img
+              class="jsx-2257590885"
+              src="/svg/menu.svg"
+            />
+          </a>
+        </nav>
+      </div>
     </div>
   </nav>
   <nav
