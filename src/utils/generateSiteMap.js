@@ -23,7 +23,7 @@ async function generateSiteMap() {
               const route = path === "/index" ? "" : path;
               return `
                       <url>
-                          <loc>${`https://winson-next.vercel.app${route}`}</loc>
+                          <loc>${`https://winsonbrooklyn.com${route}`}</loc>
                       </url>
                   `;
             })

@@ -1,15 +1,16 @@
 import React from "react";
-import { client } from "../src/utils/contentful";
-import Body from "../src/components/Body";
-import RestMenu from "../src/components/RestMenu";
-import { RestaurantContent } from "../types/restaurant";
+import { bakeryClient, client } from "../../src/utils/contentful";
+import Body from "../../src/components/Body";
+import BakeryMenu from "../../src/components/BakeryMenu";
+import { RestaurantContent } from "../../types/restaurant";
+import { MenuContent } from "../../types/menuContent";
 
 interface RestaurantProps {
+  bakeryMenuContent: MenuContent;
   pageContent: RestaurantContent;
-  restaurantMenu: any;
 }
 
-const Restaurant = ({ pageContent, restaurantMenu }: RestaurantProps) => {
+const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
   const { fields, sys } = pageContent;
   const {
     deliveryUrl,
@@ -49,7 +50,7 @@ const Restaurant = ({ pageContent, restaurantMenu }: RestaurantProps) => {
           </a>
         </div>
       </section>
-      <RestMenu menu={restaurantMenu} />
+      <BakeryMenu menu={bakeryMenuContent} />
       <style jsx>{`
         p {
           font-size: 0.8rem;
@@ -92,17 +93,18 @@ const Restaurant = ({ pageContent, restaurantMenu }: RestaurantProps) => {
   );
 };
 
-export default Restaurant;
+export default Bakery;
 
 export async function getStaticProps(context) {
-  const pageContent = await client.getEntry("3xE7ccbNmslBqWxYlZvHj3");
-  const restaurantMenu = await client.getEntries({
-    content_type: "item",
+  const pageContent = await client.getEntry("6FrvEE0piUY6cWhSwzTBrP");
+  const bakeryMenuContent = await bakeryClient.getEntries({
+    content_type: "menuItem",
   });
+
   return {
     props: {
+      bakeryMenuContent,
       pageContent,
-      restaurantMenu,
     },
   };
 }
