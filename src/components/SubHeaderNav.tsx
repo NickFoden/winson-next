@@ -8,6 +8,13 @@ const SubHeaderNav = () => {
   const menuLink = router?.pathname?.includes("restaurant")
     ? "/restaurant/menu"
     : "/bakery/menu";
+
+  if (
+    !router?.pathname.includes("restaurant") &&
+    !router?.pathname.includes("bakery")
+  ) {
+    return null;
+  }
   return (
     <>
       <nav>
