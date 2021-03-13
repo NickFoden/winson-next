@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import SubHeaderNav from "./SubHeaderNav";
 import { useOnClickOutside } from "../utils/clickOutside";
 import Burger from "../components/Burger";
 import Menu from "../components/Menu";
@@ -21,40 +22,45 @@ const HeaderNav = () => {
       <nav ref={node}>
         <Link href="/">
           <a>
-            <img src="/images/WinSonSignTypeLogo.png" className="logo" />
+            <img src="/svg/morewinsonbuttons_winson.svg" className="logo" />
           </a>
           {/* <a className="home">Win Son</a> */}
         </Link>
         <Burger open={open} setOpen={setOpen} />
         <div className="links_container">
-          <Link href="/restaurant">
-            <a
-              className={
-                router && router.pathname === "/restaurant"
-                  ? "venue_active venue"
-                  : "venue"
-              }
-            >
-              <img
-                src="/images/RestaurantMatrousso.jpeg"
-                className="logo_links"
-              />
-            </a>
-          </Link>
-          <Link href="/bakery">
-            <a
-              className={
-                router && router.pathname === "/bakery"
-                  ? "venue_active venue"
-                  : "venue"
-              }
-            >
-              <img
-                src="/images/BakerySignTypeLogo.png"
-                className="logo_links"
-              />
-            </a>
-          </Link>
+          <div className="links_container">
+            <Link href="/restaurant">
+              <a
+                className={
+                  router && router.pathname.includes("restaurant")
+                    ? "venue_active venue"
+                    : "venue"
+                }
+              >
+                <img
+                  src="/svg/morewinsonbuttons_restaurant.svg"
+                  className="logo_links"
+                />
+              </a>
+            </Link>
+            <Link href="/bakery">
+              <a
+                className={
+                  router && router.pathname.includes("bakery")
+                    ? "venue_active venue"
+                    : "venue"
+                }
+              >
+                <img
+                  src="/svg/morewinsonbuttons_bakery.svg"
+                  className="logo_links"
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="links_container">
+            <SubHeaderNav />
+          </div>
         </div>
       </nav>
       {loaded && <Menu open={open} setOpen={setOpen} />}
