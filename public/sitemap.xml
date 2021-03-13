@@ -3,15 +3,23 @@
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           
                       <url>
-                          <loc>https://winson-next.vercel.app/bakery</loc>
+                          <loc>https://winsonbrooklyn.com</loc>
                       </url>
                   
                       <url>
-                          <loc>https://winson-next.vercel.app</loc>
+                          <loc>https://winsonbrooklyn.com/bakery/index</loc>
                       </url>
                   
                       <url>
-                          <loc>https://winson-next.vercel.app/restaurant</loc>
+                          <loc>https://winsonbrooklyn.com/bakery/menu</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://winsonbrooklyn.com/restaurant/index</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://winsonbrooklyn.com/restaurant/menu</loc>
                       </url>
                   
       </urlset>

@@ -51,18 +51,28 @@ exports[`HeaderNav HeaderNav Renders 1`] = `
     class="Menustyled__StyledMenu-sc-1ipxm0t-0 ePfPiP"
   >
     <a
-      class="jsx-3838528175"
+      class="jsx-3464134909"
       href="/restaurant"
-      tabindex="-1"
     >
       Restaurant
     </a>
     <a
-      class="jsx-3838528175"
+      class="jsx-3464134909 sub"
+      href="/restaurant/menu"
+    >
+      menu
+    </a>
+    <a
+      class="jsx-3464134909"
       href="/bakery"
-      tabindex="-1"
     >
       Bakery
+    </a>
+    <a
+      class="jsx-3464134909 sub"
+      href="/bakery/menu"
+    >
+      menu
     </a>
   </nav>
 </DocumentFragment>
