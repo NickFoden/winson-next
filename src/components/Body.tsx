@@ -38,7 +38,8 @@ const Body = ({ children }) => {
       <HeaderNav />
       <main className="container">{children}</main>
       <footer>
-        <p>Win Son Brooklyn</p>
+        <p>win son brooklyn</p>
+        <a href="mailto:info@winsonbrooklyn.com">info@winsonbrooklyn.com </a>
         <p>© {new Date().getFullYear()}</p>
       </footer>
       <style jsx>
@@ -55,6 +56,18 @@ const Body = ({ children }) => {
             max-width: 750px;
             min-height: 90vh;
             padding: 1rem;
+          }
+          a {
+            color: black;
+          }
+          a:hover {
+            opacity: 0.7;
+          }
+          @media screen and (max-width: 800px) {
+            a {
+              font-size: 0.75rem;
+              padding: 0.2rem 0;
+            }
           }
         `}
       </style>
