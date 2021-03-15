@@ -6,7 +6,7 @@ const SubHeaderNav = () => {
   const router = useRouter();
 
   const menuLink = router?.pathname?.includes("restaurant")
-    ? "/restaurant/menu"
+    ? "/restaurant/dinner"
     : "/bakery/menu";
 
   const orderNowLink = router?.pathname?.includes("restaurant")
@@ -19,13 +19,54 @@ const SubHeaderNav = () => {
   ) {
     return null;
   }
+
+  const renderRestaurantMenus = () => {
+    if (router?.pathname.includes("restaurant")) {
+      return (
+        <nav>
+          <Link href="/restaurant/dinner">
+            <a
+              className={
+                router && router.pathname.includes("dinner")
+                  ? "venue_active venue"
+                  : "venue"
+              }
+            >
+              <img src="/svg/dinner.svg" />
+            </a>
+          </Link>
+          <style jsx>
+            {`
+              img {
+                height: 1rem;
+              }
+              nav {
+                margin-top: 1rem;
+              }
+              .venue {
+                margin-right: 2rem;
+              }
+              .venue:hover {
+                opacity: 0.7;
+              }
+              .venue_active {
+                border-bottom: 3px solid black;
+              }
+            `}
+          </style>
+        </nav>
+      );
+    }
+    return null;
+  };
   return (
     <>
       <nav>
         <Link href={menuLink}>
           <a
             className={
-              router && router.pathname.includes("menu")
+              (router && router.pathname.includes("menu")) ||
+              router.pathname.includes("dinner")
                 ? "venue_active venue"
                 : "venue"
             }
@@ -45,6 +86,7 @@ const SubHeaderNav = () => {
           </a>
         </Link>
       </nav>
+      {renderRestaurantMenus()}
       <style jsx>{`
         img {
           height: 1rem;
