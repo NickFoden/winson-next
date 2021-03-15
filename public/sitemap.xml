@@ -19,11 +19,19 @@
                       </url>
                   
                       <url>
+                          <loc>https://winsonbrooklyn.com/bakery/order-now</loc>
+                      </url>
+                  
+                      <url>
                           <loc>https://winsonbrooklyn.com/restaurant/index</loc>
                       </url>
                   
                       <url>
                           <loc>https://winsonbrooklyn.com/restaurant/menu</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://winsonbrooklyn.com/restaurant/order-now</loc>
                       </url>
                   
       </urlset>

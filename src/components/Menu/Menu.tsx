@@ -9,16 +9,40 @@ const Menu = ({ open, ...props }) => {
     <>
       <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
         <Link href="/restaurant">
-          <a>Restaurant</a>
+          <a>
+            <img
+              src="/svg/morewinsonbuttons_restaurant.svg"
+              className="logo_links"
+            />
+          </a>
         </Link>
         <Link href="/restaurant/menu">
-          <a className="sub">menu</a>
+          <a>
+            <img src="/svg/menu.svg" className="sub_menu" />
+          </a>
+        </Link>
+        <Link href="/restaurant/order-now">
+          <a className="sub">
+            <img src="/svg/ordernow.svg" className="sub_menu" />
+          </a>
         </Link>
         <Link href="/bakery">
-          <a>Bakery</a>
+          <a>
+            <img
+              src="/svg/morewinsonbuttons_bakery.svg"
+              className="logo_links"
+            />
+          </a>
         </Link>
         <Link href="/bakery/menu">
-          <a className="sub">menu</a>
+          <a>
+            <img src="/svg/menu.svg" className="sub_menu" />
+          </a>
+        </Link>
+        <Link href="/bakery/order-now">
+          <a className="sub">
+            <img src="/svg/ordernow.svg" className="sub_menu" />
+          </a>
         </Link>
       </StyledMenu>
       <style jsx>{`
@@ -27,9 +51,16 @@ const Menu = ({ open, ...props }) => {
           font-family: "Courier New", Courier, monospace;
           padding: 1rem 0;
           text-decoration: none;
+          min-width: 250px;
+        }
+        .logo_links {
+          height: 2.5rem;
         }
         .sub {
           font-size: 1.25rem;
+        }
+        .sub_menu {
+          height: 1.5rem;
         }
       `}</style>
     </>

@@ -68,28 +68,58 @@ exports[`HeaderNav HeaderNav Renders 1`] = `
     class="Menustyled__StyledMenu-sc-1ipxm0t-0 ePfPiP"
   >
     <a
-      class="jsx-3464134909"
+      class="jsx-2513438216"
       href="/restaurant"
     >
-      Restaurant
+      <img
+        class="jsx-2513438216 logo_links"
+        src="/svg/morewinsonbuttons_restaurant.svg"
+      />
     </a>
     <a
-      class="jsx-3464134909 sub"
+      class="jsx-2513438216"
       href="/restaurant/menu"
     >
-      menu
+      <img
+        class="jsx-2513438216 sub_menu"
+        src="/svg/menu.svg"
+      />
     </a>
     <a
-      class="jsx-3464134909"
+      class="jsx-2513438216 sub"
+      href="/restaurant/order-now"
+    >
+      <img
+        class="jsx-2513438216 sub_menu"
+        src="/svg/ordernow.svg"
+      />
+    </a>
+    <a
+      class="jsx-2513438216"
       href="/bakery"
     >
-      Bakery
+      <img
+        class="jsx-2513438216 logo_links"
+        src="/svg/morewinsonbuttons_bakery.svg"
+      />
     </a>
     <a
-      class="jsx-3464134909 sub"
+      class="jsx-2513438216"
       href="/bakery/menu"
     >
-      menu
+      <img
+        class="jsx-2513438216 sub_menu"
+        src="/svg/menu.svg"
+      />
+    </a>
+    <a
+      class="jsx-2513438216 sub"
+      href="/bakery/order-now"
+    >
+      <img
+        class="jsx-2513438216 sub_menu"
+        src="/svg/ordernow.svg"
+      />
     </a>
   </nav>
 </DocumentFragment>
