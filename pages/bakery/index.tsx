@@ -1,9 +1,7 @@
 import React from "react";
 import { bakeryClient, client } from "../../src/utils/contentful";
 import Body from "../../src/components/Body";
-import BakeryMenu from "../../src/components/BakeryMenu";
 import { RestaurantContent } from "../../types/restaurant";
-import { MenuContent } from "../../types/menuContent";
 
 interface RestaurantProps {
   pageContent: RestaurantContent;
