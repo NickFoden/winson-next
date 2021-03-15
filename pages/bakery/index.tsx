@@ -6,11 +6,10 @@ import { RestaurantContent } from "../../types/restaurant";
 import { MenuContent } from "../../types/menuContent";
 
 interface RestaurantProps {
-  bakeryMenuContent: MenuContent;
   pageContent: RestaurantContent;
 }
 
-const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
+const Bakery = ({ pageContent }: RestaurantProps) => {
   const { fields, sys } = pageContent;
   const {
     deliveryUrl,
@@ -96,13 +95,9 @@ export default Bakery;
 
 export async function getStaticProps(context) {
   const pageContent = await client.getEntry("6FrvEE0piUY6cWhSwzTBrP");
-  const bakeryMenuContent = await bakeryClient.getEntries({
-    content_type: "menuItem",
-  });
 
   return {
     props: {
-      bakeryMenuContent,
       pageContent,
     },
   };
