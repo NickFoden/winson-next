@@ -9,6 +9,10 @@ const SubHeaderNav = () => {
     ? "/restaurant/menu"
     : "/bakery/menu";
 
+  const orderNowLink = router?.pathname?.includes("restaurant")
+    ? "/restaurant/order-now"
+    : "/bakery/order-now";
+
   if (
     !router?.pathname.includes("restaurant") &&
     !router?.pathname.includes("bakery")
@@ -27,6 +31,17 @@ const SubHeaderNav = () => {
             }
           >
             <img src="/svg/menu.svg" />
+          </a>
+        </Link>
+        <Link href={orderNowLink}>
+          <a
+            className={
+              router && router.pathname.includes("order-now")
+                ? "venue_active venue"
+                : "venue"
+            }
+          >
+            <img src="/svg/ordernow.svg" />
           </a>
         </Link>
       </nav>

@@ -26,34 +26,24 @@ const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
     <Body>
       <section className="column">
         <h1 className="title">{name}</h1>
-        <img className="logo" src={logo.fields.file.url} alt={name} />
+        <img
+          className="logo"
+          src="/images/Winson_people_2_crop.png"
+          alt={name}
+        />
         <p>{service1}</p>
         <p>{service2}</p>
-        <div className="row_links">
-          <a
-            href={pickupUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} pick up`}
-            className="delivery_link"
-          >
-            Pick Up
-          </a>
-          <a
-            href={deliveryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} Delivery`}
-            className="delivery_link"
-          >
-            Delivery
-          </a>
-        </div>
+        <a href="mailto:bakery@winsonbrooklyn.com">bakery@winsonbrooklyn.com</a>
+        <p className="address">164 Graham Ave</p>
+        <p>Brooklyn, NY 11206</p>
       </section>
-      <BakeryMenu menu={bakeryMenuContent} />
       <style jsx>{`
         p {
-          font-size: 0.8rem;
+          font-size: 1rem;
+        }
+        .address {
+          font-size: 1rem;
+          margin-top: 2rem;
         }
         .column {
           align-items: center;
@@ -71,22 +61,31 @@ const Bakery = ({ bakeryMenuContent, pageContent }: RestaurantProps) => {
         .logo {
           border: 1px solid white;
           border-radius: 5px;
-          height: 250px;
-          width: 250px;
+          height: auto;
+          width: 90vw;
           object-fit: contain;
           transition: opacity ease-in-out 350ms, border ease-in-out 350ms;
+          margin: 2rem 0;
         }
         .logo:hover {
           opacity: 0.7;
         }
-        .row_links {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 2rem;
-          width: 300px;
-        }
         .title {
           font-family: Courier;
+        }
+        a {
+          color: black;
+          font-size: 1rem;
+          margin-top: 2rem;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
+        @media screen and (max-width: 800px) {
+          a {
+            font-size: 0.75rem;
+            padding: 0.2rem 0;
+          }
         }
       `}</style>
     </Body>

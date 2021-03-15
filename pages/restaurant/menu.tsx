@@ -23,32 +23,6 @@ const Restaurant = ({ pageContent, restaurantMenu }: RestaurantProps) => {
 
   return (
     <Body>
-      <section className="column">
-        <h1 className="title">{name}</h1>
-        <img className="logo" src={logo.fields.file.url} alt={name} />
-        <p>{service1}</p>
-        <p>{service2}</p>
-        <div className="row_links">
-          <a
-            href={pickupUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} pick up`}
-            className="delivery_link"
-          >
-            Pick Up
-          </a>
-          <a
-            href={deliveryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} Delivery`}
-            className="delivery_link"
-          >
-            Delivery
-          </a>
-        </div>
-      </section>
       <RestMenu menu={restaurantMenu} />
       <style jsx>{`
         p {
