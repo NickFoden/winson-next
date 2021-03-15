@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { MenuContent } from "../../../types/menuContent";
+import { DinnerMenu } from "../../../types/dinnerMenu";
+import { MenuItem } from "../../../types/menuItem";
 
 interface RestMenuProps {
-  menu: MenuContent;
+  menu: DinnerMenu;
 }
 
 export const StyledMenuItem = styled.li`
@@ -20,61 +21,69 @@ export const StyledSectionTitle = styled.h1`
 `;
 
 const RestMenu = ({ menu, ...props }: RestMenuProps) => {
-  const renderItems = (id: string) =>
-    menu.items
-      .filter((m) => m.fields.category.sys.id === id)
-      .sort((a, b) => a.fields.price - b.fields.price)
-      .map((m) => (
-        <StyledMenuItem key={m.sys.id}>
-          <span className="item_title">
-            {m.fields.name}{" "}
-            <span className="item_desc">{m.fields.optionalDescription}</span>
-          </span>
-          <p className="price_span">
-            {m.fields.price}
-            {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
-          </p>
-          <style jsx>{`
-            .item_title {
-              display: flex;
-              flex-direction: column;
-              font-size: 1rem;
-            }
-            .item_desc {
-              font-size: 0.8rem;
-              font-weight: 400;
-              line-height: 1.1;
-              margin-top: 2px;
-            }
-            .price_span {
-              min-width: 50px;
-              font-weight: 500;
-              text-align: right;
-            }
-          `}</style>
-        </StyledMenuItem>
-      ));
+  const {
+    canBottle,
+    cocktails,
+    drafts,
+    grocery,
+    largePlates,
+    nonAlcoholic,
+    smallPlates,
+    wine,
+  } = menu.fields;
+  const renderItems = (food: MenuItem[]) =>
+    food.map((m) => (
+      <StyledMenuItem key={m.sys.id}>
+        <span className="item_title">
+          {m.fields.name}{" "}
+          <span className="item_desc">{m.fields.optionalDescription}</span>
+        </span>
+        <p className="price_span">
+          {m.fields.price}
+          {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
+        </p>
+        <style jsx>{`
+          .item_title {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+          }
+          .item_desc {
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-top: 2px;
+          }
+          .price_span {
+            min-width: 50px;
+            font-weight: 500;
+            text-align: right;
+          }
+        `}</style>
+      </StyledMenuItem>
+    ));
 
   return (
     <div className="container">
       <section>
-        <StyledSectionTitle>food</StyledSectionTitle>
-        <ul>{renderItems("61P8WgXiX9V1lmt6FZRBFP")}</ul>
-        <StyledSectionTitle>beer</StyledSectionTitle>
+        <StyledSectionTitle>small plates</StyledSectionTitle>
+        <ul>{renderItems(smallPlates)}</ul>
+        <StyledSectionTitle>large plates</StyledSectionTitle>
+        <ul>{renderItems(largePlates)}</ul>
         <StyledSectionTitle>can & bottle</StyledSectionTitle>
-        <ul>{renderItems("21V6JJFoWE25ESGNiqhQ4Q")}</ul>
+        <ul>{renderItems(canBottle)}</ul>
         <StyledSectionTitle>drafts</StyledSectionTitle>
-        <ul>{renderItems("6Y4PargCt5Ysv5bRk0m0J4")}</ul>
+        <ul>{renderItems(drafts)}</ul>
         <StyledSectionTitle>grocery</StyledSectionTitle>
-        <ul>{renderItems("6I9iScWxpaKc1dStXblHjJ")}</ul>
+        <ul>{renderItems(grocery)}</ul>
       </section>
       <section>
         <StyledSectionTitle>cocktails</StyledSectionTitle>
-        <ul>{renderItems("6WfZm0iNDjZ5U20XtiPjKz")}</ul>
+        <ul>{renderItems(cocktails)}</ul>
         <StyledSectionTitle>wine </StyledSectionTitle>
-        <ul>{renderItems("1WBvbRYMpbZWPogkXdRVKH")}</ul>
+        <ul>{renderItems(wine)}</ul>
         <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
-        <ul>{renderItems("5NwcH44WWl4mwyRgmVogBh")}</ul>
+        <ul>{renderItems(nonAlcoholic)}</ul>
         <p className="diet">
           v = vegetarian vg = vegan gf = gluten-free * = can be made as
         </p>
