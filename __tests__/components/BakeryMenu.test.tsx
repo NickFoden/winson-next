@@ -1,14 +1,30 @@
 import { render } from "@testing-library/react";
 import BakeryMenu from "../../src/components/BakeryMenu";
-import { MenuContent } from "../../types/menuContent";
+import { MenuBakery } from "../../types/bakeryMenu";
+import { MenuItem } from "../../types/menuItem";
 
 describe("Bakery Menu", () => {
   const mockMenuItems = {
-    items: [],
+    fields: {
+      beer: [] as MenuItem[],
+      burgersAndSandos: [] as MenuItem[],
+      canBottle: [] as MenuItem[],
+      cocktails: [] as MenuItem[],
+      cafe: [] as MenuItem[],
+      friedChicken: [] as MenuItem[],
+      largePlates: [] as MenuItem[],
+      nonAlcoholic: [] as MenuItem[],
+      pastries: [] as MenuItem[],
+      sandwiches: [] as MenuItem[],
+      smallBites: [] as MenuItem[],
+      soyMilk: [] as MenuItem[],
+      tea: [] as MenuItem[],
+      wine: [] as MenuItem[],
+    },
     sys: {
       id: "fake",
     },
-  } as MenuContent;
+  } as MenuBakery;
   test("Bakery Menu renders the titles for each section", () => {
     const { getByText } = render(<BakeryMenu menu={mockMenuItems} />);
     const menuTitles = [

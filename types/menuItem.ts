@@ -9,8 +9,6 @@ export interface MenuItem {
     optionalDescription: string;
     price: number;
     priceHigh: number;
-    vegan: boolean;
-    vegetarian: boolean;
   };
   sys: { id: string };
 }
