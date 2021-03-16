@@ -16,9 +16,14 @@ const Menu = ({ open, ...props }) => {
             />
           </a>
         </Link>
-        <Link href="/restaurant/menu">
+        <Link href="/restaurant/dinner">
           <a>
-            <img src="/svg/menu.svg" className="sub_menu" />
+            <img src="/svg/dinner.svg" className="sub_menu" />
+          </a>
+        </Link>
+        <Link href="/restaurant/brunch">
+          <a>
+            <img src="/svg/brunch.svg" className="sub_menu" />
           </a>
         </Link>
         <Link href="/restaurant/order-now">

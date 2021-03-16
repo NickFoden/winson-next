@@ -9,11 +9,11 @@ export interface MenuBakery {
     cafe: MenuItem[];
     friedChicken: MenuItem[];
     largePlates: MenuItem[];
-    nonAlcoholic: MenuItem[];
     pastries: MenuItem[];
     sandwiches: MenuItem[];
     smallBites: MenuItem[];
     soyMilk: MenuItem[];
+    sparklingJuice: MenuItem[];
     tea: MenuItem[];
     wine: MenuItem[];
   };

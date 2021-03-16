@@ -31,10 +31,19 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
         />
         <p>{service1}</p>
         <p>{service2}</p>
+        <a href="mailto:info@winsonbrooklyn.com">info@winsonbrooklyn.com</a>
         <p className="address">159 Graham Ave</p>
         <p>Brooklyn, NY 11206</p>
       </section>
       <style jsx>{`
+        a {
+          color: black;
+          font-size: 1rem;
+          margin-top: 2rem;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
         p {
           font-size: 1rem;
         }
@@ -71,6 +80,12 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
 
         .title {
           font-family: Courier;
+        }
+        @media screen and (max-width: 800px) {
+          a {
+            font-size: 0.75rem;
+            padding: 0.2rem 0;
+          }
         }
       `}</style>
     </Body>

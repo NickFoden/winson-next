@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { MenuBakery } from "../../../types/bakeryMenu";
+import { MenuBrunch } from "../../../types/brunchMenu";
 import { MenuItem } from "../../../types/menuItem";
 
-interface BakeryMenuProps {
-  menu: MenuBakery;
+interface BrunchMenuProps {
+  menu: MenuBrunch;
 }
 
 export const StyledMenuItem = styled.li`
   display: flex;
   justify-content: space-between;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   width: 300px;
 `;
 
@@ -19,41 +19,50 @@ export const StyledSectionTitle = styled.h1`
   font-weight: 700;
   margin: 1rem 0 0.5rem;
 `;
-export const StyledSectionTime = styled.h1`
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: -0.25rem 0 0.5rem -0.25rem;
-`;
 
-const BakeryMenu = ({ menu }: BakeryMenuProps) => {
-  const { fields } = menu;
+const BrunchMenu = ({ menu, ...props }: BrunchMenuProps) => {
   const {
-    beer,
-    burgersAndSandos,
-    cafe,
+    canBottle,
     cocktails,
-    friedChicken,
-    pastries,
-    sandwiches,
-    smallBites,
-    soyMilk,
-    sparklingJuice,
-    tea,
+    dessert,
+    drafts,
+    grocery,
+    largePlates,
+    nonAlcoholic,
+    sides,
+    smallPlates,
     wine,
-  } = fields;
-
+  } = menu.fields;
   const renderItems = (food: MenuItem[]) =>
     food.map((m) => (
-      <StyledMenuItem key={m.sys.id}>
-        <span className="item_title">
-          {m.fields.name}{" "}
-          <span className="item_desc">{m.fields.optionalDescription}</span>
-        </span>
-        <p className="price_span">
-          {m.fields.price}
-          {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
-        </p>
+      <div key={m.sys.id}>
+        <StyledMenuItem>
+          <span className="item_title">
+            {m.fields.name}{" "}
+            <span className="item_desc">{m.fields.optionalDescription}</span>
+          </span>
+          <p className="price_span">
+            {m.fields.price}
+            {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
+          </p>
+        </StyledMenuItem>
+        {m.fields?.optionalAddOn && (
+          <StyledMenuItem>
+            <p className="add">{m.fields.optionalAddOn}</p>
+            <p className="price_span add"> {m.fields?.optionalAddOnPrice}</p>
+          </StyledMenuItem>
+        )}
         <style jsx>{`
+          .add {
+            font-size: 0.8rem;
+          }
+          .add_on_price {
+            margin-left: 2rem;
+          }
+          .column {
+            display: flex;
+            flex-direction: column;
+          }
           .item_title {
             display: flex;
             flex-direction: column;
@@ -71,40 +80,34 @@ const BakeryMenu = ({ menu }: BakeryMenuProps) => {
             text-align: right;
           }
         `}</style>
-      </StyledMenuItem>
+      </div>
     ));
 
   return (
     <div className="container">
       <section>
-        <StyledSectionTitle>café</StyledSectionTitle>
-        <ul>{renderItems(cafe)}</ul>
-        <StyledSectionTitle>tea</StyledSectionTitle>
-        <ul>{renderItems(tea)}</ul>
-        <StyledSectionTitle>soy milk (9 am - 1 pm)</StyledSectionTitle>
-        <ul>{renderItems(soyMilk)}</ul>
-        <StyledSectionTitle>sparkling + juice</StyledSectionTitle>
-        <ul>{renderItems(sparklingJuice)}</ul>
-        <StyledSectionTitle>beer</StyledSectionTitle>
-        <ul>{renderItems(beer)}</ul>
-        <StyledSectionTitle>cocktails</StyledSectionTitle>
-        <ul>{renderItems(cocktails)}</ul>
-        <StyledSectionTitle>wine</StyledSectionTitle>
-        <ul>{renderItems(wine)}</ul>
+        <StyledSectionTitle>small plates</StyledSectionTitle>
+        <ul>{renderItems(smallPlates)}</ul>
+        <StyledSectionTitle>large plates</StyledSectionTitle>
+        <ul>{renderItems(largePlates)}</ul>
+        <StyledSectionTitle>sides</StyledSectionTitle>
+        <ul>{renderItems(sides)}</ul>
+        <StyledSectionTitle>dessert</StyledSectionTitle>
+        <ul>{renderItems(dessert)}</ul>
+        <StyledSectionTitle>can & bottle</StyledSectionTitle>
+        <ul>{renderItems(canBottle)}</ul>
+        <StyledSectionTitle>drafts</StyledSectionTitle>
+        <ul>{renderItems(drafts)}</ul>
       </section>
       <section>
-        <StyledSectionTitle>gāodiǎn (pastries)</StyledSectionTitle>
-        <ul>{renderItems(pastries)}</ul>
-        <StyledSectionTitle>sānmíngzhì (sandwiches)</StyledSectionTitle>
-        <ul>{renderItems(sandwiches)}</ul>
-        <StyledSectionTitle>burgers + sandos</StyledSectionTitle>
-        <StyledSectionTime>(1:30 - 9 pm)</StyledSectionTime>
-        <ul>{renderItems(burgersAndSandos)}</ul>
-        <StyledSectionTitle>xiǎochí + sālā</StyledSectionTitle>
-        <StyledSectionTime>(small bites + salad)</StyledSectionTime>
-        <ul>{renderItems(smallBites)}</ul>
-        <StyledSectionTitle>fried chicken</StyledSectionTitle>
-        <ul>{renderItems(friedChicken)}</ul>
+        <StyledSectionTitle>cocktails</StyledSectionTitle>
+        <ul>{renderItems(cocktails)}</ul>
+        <StyledSectionTitle>wine </StyledSectionTitle>
+        <ul>{renderItems(wine)}</ul>
+        <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
+        <ul>{renderItems(nonAlcoholic)}</ul>
+        <StyledSectionTitle>grocery</StyledSectionTitle>
+        <ul>{renderItems(grocery)}</ul>
         <p className="diet">
           v = vegetarian vg = vegan gf = gluten-free * = can be made as
         </p>
@@ -150,4 +153,4 @@ const BakeryMenu = ({ menu }: BakeryMenuProps) => {
   );
 };
 
-export default BakeryMenu;
+export default BrunchMenu;

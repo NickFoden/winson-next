@@ -1,6 +1,6 @@
 import { MenuItem } from "./menuItem";
 
-export interface DinnerMenu {
+export interface MenuBrunch {
   fields: {
     baiju: MenuItem[];
     canBottle: MenuItem[];
@@ -12,7 +12,6 @@ export interface DinnerMenu {
     nonAlcoholic: MenuItem[];
     sides: MenuItem[];
     smallPlates: MenuItem[];
-    whiskey: MenuItem[];
     wine: MenuItem[];
   };
   sys: {
