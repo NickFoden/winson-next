@@ -39,7 +39,7 @@ const Body = ({ children }) => {
       <main className="container">{children}</main>
       <footer>
         <p>win son brooklyn</p>
-        <a href="mailto:info@winsonbrooklyn.com">info@winsonbrooklyn.com </a>
+        {/* <a href="mailto:info@winsonbrooklyn.com">info@winsonbrooklyn.com </a> */}
         <p>© {new Date().getFullYear()}</p>
       </footer>
       <style jsx>

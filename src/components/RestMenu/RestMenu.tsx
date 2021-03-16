@@ -22,27 +22,49 @@ export const StyledSectionTitle = styled.h1`
 
 const RestMenu = ({ menu, ...props }: RestMenuProps) => {
   const {
+    baiju,
     canBottle,
     cocktails,
+    dessert,
     drafts,
     grocery,
     largePlates,
     nonAlcoholic,
+    sides,
     smallPlates,
+    whiskey,
     wine,
   } = menu.fields;
   const renderItems = (food: MenuItem[]) =>
     food.map((m) => (
-      <StyledMenuItem key={m.sys.id}>
-        <span className="item_title">
-          {m.fields.name}{" "}
-          <span className="item_desc">{m.fields.optionalDescription}</span>
-        </span>
-        <p className="price_span">
-          {m.fields.price}
-          {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
-        </p>
+      <div key={m.sys.id}>
+        <StyledMenuItem>
+          <span className="item_title">
+            {m.fields.name}{" "}
+            <span className="item_desc">{m.fields.optionalDescription}</span>
+          </span>
+          <p className="price_span">
+            {m.fields.price}
+            {m.fields.priceHigh ? "/" + m.fields.priceHigh : ""}
+          </p>
+        </StyledMenuItem>
+        {m.fields?.optionalAddOn && (
+          <StyledMenuItem>
+            <p className="add">{m.fields.optionalAddOn}</p>
+            <p className="price_span add"> {m.fields?.optionalAddOnPrice}</p>
+          </StyledMenuItem>
+        )}
         <style jsx>{`
+          .add {
+            font-size: 0.8rem;
+          }
+          .add_on_price {
+            margin-left: 2rem;
+          }
+          .column {
+            display: flex;
+            flex-direction: column;
+          }
           .item_title {
             display: flex;
             flex-direction: column;
@@ -60,7 +82,7 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
             text-align: right;
           }
         `}</style>
-      </StyledMenuItem>
+      </div>
     ));
 
   return (
@@ -70,20 +92,28 @@ const RestMenu = ({ menu, ...props }: RestMenuProps) => {
         <ul>{renderItems(smallPlates)}</ul>
         <StyledSectionTitle>large plates</StyledSectionTitle>
         <ul>{renderItems(largePlates)}</ul>
+        <StyledSectionTitle>sides</StyledSectionTitle>
+        <ul>{renderItems(sides)}</ul>
+        <StyledSectionTitle>dessert</StyledSectionTitle>
+        <ul>{renderItems(dessert)}</ul>
         <StyledSectionTitle>can & bottle</StyledSectionTitle>
         <ul>{renderItems(canBottle)}</ul>
         <StyledSectionTitle>drafts</StyledSectionTitle>
         <ul>{renderItems(drafts)}</ul>
-        <StyledSectionTitle>grocery</StyledSectionTitle>
-        <ul>{renderItems(grocery)}</ul>
       </section>
       <section>
         <StyledSectionTitle>cocktails</StyledSectionTitle>
         <ul>{renderItems(cocktails)}</ul>
         <StyledSectionTitle>wine </StyledSectionTitle>
         <ul>{renderItems(wine)}</ul>
+        <StyledSectionTitle>baiju</StyledSectionTitle>
+        <ul>{renderItems(baiju)}</ul>
+        <StyledSectionTitle>whiskey</StyledSectionTitle>
+        <ul>{renderItems(whiskey)}</ul>
         <StyledSectionTitle>non-alcoholic</StyledSectionTitle>
         <ul>{renderItems(nonAlcoholic)}</ul>
+        <StyledSectionTitle>grocery</StyledSectionTitle>
+        <ul>{renderItems(grocery)}</ul>
         <p className="diet">
           v = vegetarian vg = vegan gf = gluten-free * = can be made as
         </p>

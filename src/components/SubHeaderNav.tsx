@@ -35,16 +35,34 @@ const SubHeaderNav = () => {
               <img src="/svg/dinner.svg" />
             </a>
           </Link>
+          <Link href="/restaurant/brunch">
+            <a
+              className={
+                router && router.pathname.includes("brunch")
+                  ? "venue_active venue"
+                  : "venue"
+              }
+            >
+              <img src="/svg/brunch.svg" />
+            </a>
+          </Link>
           <style jsx>
             {`
+              a {
+                margin-bottom: 0.3rem;
+              }
               img {
-                height: 1rem;
+                height: 0.75rem;
               }
               nav {
+                display: flex;
+                flex-direction: column;
                 margin-top: 1rem;
               }
               .venue {
+                border-bottom: 3px solid white;
                 margin-right: 2rem;
+                width: 50px;
               }
               .venue:hover {
                 opacity: 0.7;
@@ -66,7 +84,8 @@ const SubHeaderNav = () => {
           <a
             className={
               (router && router.pathname.includes("menu")) ||
-              router.pathname.includes("dinner")
+              router.pathname.includes("dinner") ||
+              router.pathname.includes("brunch")
                 ? "venue_active venue"
                 : "venue"
             }

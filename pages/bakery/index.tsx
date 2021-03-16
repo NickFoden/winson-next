@@ -35,6 +35,14 @@ const Bakery = ({ pageContent }: RestaurantProps) => {
         <p>Brooklyn, NY 11206</p>
       </section>
       <style jsx>{`
+        a {
+          color: black;
+          font-size: 1rem;
+          margin-top: 2rem;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
         p {
           font-size: 1rem;
         }
@@ -69,14 +77,6 @@ const Bakery = ({ pageContent }: RestaurantProps) => {
         }
         .title {
           font-family: Courier;
-        }
-        a {
-          color: black;
-          font-size: 1rem;
-          margin-top: 2rem;
-        }
-        a:hover {
-          opacity: 0.7;
         }
         @media screen and (max-width: 800px) {
           a {

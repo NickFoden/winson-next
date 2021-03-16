@@ -1,12 +1,10 @@
 export interface MenuItem {
   fields: {
-    canBeGlutenFree: boolean;
-    canBeVegan: boolean;
-    canBeVegetarian: boolean;
     category: { sys: { id: string } };
-    glutenFree: boolean;
     name: string;
     optionalDescription: string;
+    optionalAddOn?: string;
+    optionalAddOnPrice?: number;
     price: number;
     priceHigh: number;
   };
