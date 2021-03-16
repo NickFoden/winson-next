@@ -3,14 +3,14 @@
 exports[`HeaderNav HeaderNav Renders 1`] = `
 <DocumentFragment>
   <nav
-    class="jsx-110598338"
+    class="jsx-1755476967"
   >
     <a
-      class="jsx-110598338"
+      class="jsx-1755476967"
       href="/"
     >
       <img
-        class="jsx-110598338 logo"
+        class="jsx-1755476967 logo"
         src="/svg/morewinsonbuttons_winson.svg"
       />
     </a>
@@ -34,32 +34,32 @@ exports[`HeaderNav HeaderNav Renders 1`] = `
       </button>
     </div>
     <div
-      class="jsx-110598338 links_container"
+      class="jsx-1755476967 links_container"
     >
       <div
-        class="jsx-110598338 links_container"
+        class="jsx-1755476967 links_container"
       >
         <a
-          class="jsx-110598338 venue"
+          class="jsx-1755476967 venue"
           href="/restaurant"
         >
           <img
-            class="jsx-110598338 logo_links"
+            class="jsx-1755476967 logo_links"
             src="/svg/morewinsonbuttons_restaurant.svg"
           />
         </a>
         <a
-          class="jsx-110598338 venue"
+          class="jsx-1755476967 venue"
           href="/bakery"
         >
           <img
-            class="jsx-110598338 logo_links"
+            class="jsx-1755476967 logo_links"
             src="/svg/morewinsonbuttons_bakery.svg"
           />
         </a>
       </div>
       <div
-        class="jsx-110598338 links_container"
+        class="jsx-1755476967 links_container"
       />
     </div>
   </nav>
