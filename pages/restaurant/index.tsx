@@ -86,7 +86,7 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
         }
         .intro_p {
           margin-bottom: 0.5rem;
-          max-width: 100vw;
+          max-width: 90vw;
           width: 750px;
         }
         .logo {
