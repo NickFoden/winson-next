@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { client } from "../../src/utils/contentful";
 import Body from "../../src/components/Body";
 import RestMenu from "../../src/components/RestMenu";
@@ -24,6 +25,23 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
     <Body>
       <section className="column">
         <h1 className="title">{name}</h1>
+        <p className="intro_p">
+          we are now taking reservations for outdoor table service. reservations
+          are for parties of 5 - 7 guests in our covered, heated outdoor dining
+          space. all other parties will be sat on a walk up basis.
+        </p>
+        <p className="intro_p">
+          we are not seating any indoor guests at this time. any further
+          questions about our current offerings can be sent to
+          reservations@winsonbrooklyn.com.
+        </p>
+        <p className="intro_p">
+          our health and safety measures are listed{" "}
+          <Link href="/">
+            <a>here</a>
+          </Link>
+          .
+        </p>
         <img
           className="logo"
           src="/images/ElBrillianteNightStraight2000.jpg"
@@ -46,6 +64,8 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
         }
         p {
           font-size: 1rem;
+          line-height: 1.1;
+          text-transform: lowercase;
         }
         .address {
           font-size: 1rem;
@@ -64,11 +84,16 @@ const Restaurant = ({ pageContent }: RestaurantProps) => {
           font-family: Courier;
           font-size: 1.5rem;
         }
+        .intro_p {
+          margin-bottom: 0.5rem;
+          max-width: 100vw;
+          width: 750px;
+        }
         .logo {
           border: 1px solid white;
           border-radius: 5px;
           height: auto;
-          width: 550px;
+          width: 750px;
           margin-bottom: 2rem;
           max-width: 100vw;
           object-fit: contain;

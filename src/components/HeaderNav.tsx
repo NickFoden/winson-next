@@ -70,6 +70,8 @@ const HeaderNav = () => {
           justify-content: space-between;
           padding: 1rem;
           width: 100vw;
+          margin: 0 auto;
+          max-width: 750px;
         }
 
         .home {
